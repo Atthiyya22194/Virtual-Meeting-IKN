@@ -15,6 +15,8 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
 
     private Dictionary<Player, UserRoomPanel> userDisplayed = new Dictionary<Player, UserRoomPanel>();
 
+    public TMP_Text roomCodeText;
+
     public Transform roomPanel;
     public UserRoomPanel userRoomPrefab;
 
@@ -28,7 +30,7 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
     }
 
     public void CreateRoom() {
-        string roomName = "tes";
+        string roomName = Random.Range(1000, 9999).ToString();
         RoomOptions roomOptions = new RoomOptions()
         {
             IsVisible = true,
@@ -43,6 +45,7 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
         if (PhotonNetwork.CurrentRoom == null) {
             return;
         }
+
         var playerList = PhotonNetwork.PlayerList;
         Debug.Log(playerList.Length);
         for (int i = 0; i < playerList.Length; i++) {
@@ -62,15 +65,23 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
     public override void OnJoinedRoom() {
         CleanUpRoom();
 
+        roomCodeText.text = "Room Code: " + PhotonNetwork.CurrentRoom.Name;
+
         roomGameObject.SetActive(true);
         lobbyGameObject.SetActive(false);
+
+        ExitGames.Client.Photon.Hashtable properties = new ExitGames.Client.Photon.Hashtable()
+        {
+            {"playerAvatar", 0 }
+        };
+
+        PhotonNetwork.SetPlayerCustomProperties(properties);
 
         RefreshDisplayedUser();
 
         if (PhotonNetwork.IsMasterClient) {
             // show start button
-            masterStartButton.SetActive(true);
-            PhotonNetwork.AutomaticallySyncScene = true;
+            masterStartButton.SetActive(true);            
         }
     }
 
@@ -93,6 +104,7 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
 
     public void OnMasterPlayButton_Clicked() {
         //PhotonNetwork.LoadLevel("MeetingRoom");
+        PhotonNetwork.LoadLevel(1);
     }
 
     public void OnCreateRoomButton_Clicked() {

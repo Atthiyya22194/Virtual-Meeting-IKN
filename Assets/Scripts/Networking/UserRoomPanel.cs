@@ -35,7 +35,7 @@ public class UserRoomPanel : MonoBehaviourPunCallbacks
         } else {
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] - 1;
         }
-
+        Debug.Log((int)playerProperties["playerAvatar"]);
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
     }
 

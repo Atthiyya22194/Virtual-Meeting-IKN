@@ -6,7 +6,27 @@ ModelImporter:
   - first:
       74: -203655887218126122
     second: mixamo.com
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Celana_Baked.003
+    second: {fileID: 2100000, guid: 955c4c962ffb25d4ba2085dfaf102643, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 1ac7d3b835f0ec644b89dde17cb8b98b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: initialShadingGroup2.003
+    second: {fileID: 2100000, guid: 9b839bcffa5c274498d19c0af36fb2da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: magang.003
+    second: {fileID: 2100000, guid: b7144ed9c0c4b89408368cf6232625b0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

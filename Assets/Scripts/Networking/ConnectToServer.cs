@@ -24,7 +24,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks {
     }
 
     public override void OnConnectedToMaster() {
-        PhotonNetwork.AutomaticallySyncScene = false;
+        PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = UserManager.Instance.Name;
         PhotonNetwork.JoinLobby(TypedLobby.Default);
     }
