@@ -33,18 +33,27 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
         {
             IsVisible = true,
             IsOpen = true,
-            MaxPlayers = 4
+            MaxPlayers = 4,
+            BroadcastPropsChangeToAll = true,
         };
         PhotonNetwork.CreateRoom(roomName, roomOptions);
     }
 
     private void RefreshDisplayedUser() {
+        if (PhotonNetwork.CurrentRoom == null) {
+            return;
+        }
         var playerList = PhotonNetwork.PlayerList;
         Debug.Log(playerList.Length);
         for (int i = 0; i < playerList.Length; i++) {
             if (!userDisplayed.ContainsKey(playerList[i])) {
                 UserRoomPanel userRoomPanel = Instantiate(userRoomPrefab, roomPanel);
                 userRoomPanel.SetPlayer(playerList[i]);
+
+                if (playerList[i] == PhotonNetwork.LocalPlayer) {
+                    userRoomPanel.ApplyLocalChange();
+                }
+
                 userDisplayed.Add(playerList[i], userRoomPanel);
             }
         }
