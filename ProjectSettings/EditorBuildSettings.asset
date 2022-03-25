@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ConnectToServerLobby.unity
     guid: 5416ad96fae0c8e47a382e7a96d8d8fd
-  - enabled: 1
+  - enabled: 0
     path: Assets/PolygonDungeon/Scenes/Demo.unity
     guid: 7dd3b3b67a8b56d4e8640fa6891eaf3b
+  - enabled: 1
+    path: Assets/Scenes/MeetingRoom.unity
+    guid: 520ba024674d8fa4c9c4c8b55f8c21f3
   m_configObjects: {}
