@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8066384605984436749}
   - component: {fileID: 8106675977023134566}
   - component: {fileID: 5781535396367785954}
+  - component: {fileID: 3316637639722557659}
   m_Layer: 0
   m_Name: MasterNetwork
   m_TagString: Untagged
@@ -65,6 +66,34 @@ MonoBehaviour:
       - m_Target: {fileID: 8106675977023134566}
         m_TargetAssemblyTypeName: MasterNetworkManager, Assembly-CSharp
         m_MethodName: Response_MasukButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3316637639722557659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8066384605984436750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b196723435084fa4db6fedec13226a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 26ba183ea6d25aa46a5a7b91b02f69fd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8106675977023134566}
+        m_TargetAssemblyTypeName: MasterNetworkManager, Assembly-CSharp
+        m_MethodName: Response_BackToLobby
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
