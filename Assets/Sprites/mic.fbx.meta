@@ -3,7 +3,37 @@ guid: 6a149768c0db0d54f88bcdc573cacfc5
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NurbsPath.001_Baked
+    second: {fileID: 2100000, guid: 97f01f8f8628c354ba9aa9bdd4bc5d56, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NurbsPath.002_Baked
+    second: {fileID: 2100000, guid: 969ac18c2434206458252c8f9bb10c44, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: NurbsPath.003_Baked
+    second: {fileID: 2100000, guid: 649fd5d1ac454ba4fa3ea5e1685b0d3b, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MergedBake_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: b1f5e3ac67a20774db597fb96dce15be, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MergedBake_Bake1_PBR_Metalness
+    second: {fileID: 2800000, guid: 5d16d78d2fadd5f45a59c0d43d88eef1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: MergedBake_Bake1_PBR_Roughness
+    second: {fileID: 2800000, guid: 8fe22653b6d137e4b991c8979480c61c, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
