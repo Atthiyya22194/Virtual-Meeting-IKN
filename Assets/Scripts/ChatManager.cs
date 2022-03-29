@@ -36,7 +36,7 @@ public class ChatManager : MonoBehaviour
             chatContent.text = "";
         }
 
-        if (Input.GetKeyUp(KeyCode.Return)) {
+        if (Keyboard.current.enterKey.wasReleasedThisFrame) {
             if (EventSystem.current.currentSelectedGameObject == chatInput) {
                 //Debug.Log("Test 1");
                 EventSystem.current.SetSelectedGameObject(chatInput.gameObject, null);
