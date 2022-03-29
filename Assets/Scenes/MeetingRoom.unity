@@ -1877,6 +1877,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_Spacing
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_Padding.m_Left
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_Padding.m_Right
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_Padding.m_Bottom
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4683191643355078486, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
+      propertyPath: m_ChildControlWidth
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4683191643989035840, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
       propertyPath: roomDetail
       value: 
