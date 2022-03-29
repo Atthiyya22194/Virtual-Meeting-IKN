@@ -349,6 +349,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc94785f844445541a9a5eff77867747, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomDetail: {fileID: 4683191644363978887}
   playerListItemPrefab: {fileID: 6091713949041468768, guid: b9215a4e73b1a4946a79c7dced7aabc0, type: 3}
   playerListTransform: {fileID: 4683191643355078487}
   roomCodeText: {fileID: 4683191643598531740}

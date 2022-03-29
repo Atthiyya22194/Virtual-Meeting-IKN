@@ -8,6 +8,7 @@ public class ConnectToServer : MonoBehaviourPunCallbacks {
 
     public GameObject roomGameObject;
     public GameObject lobbyGameObject;
+    ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
 
     private void Awake() {
     #if !UNITY_EDITOR && UNITY_WEBGL
@@ -27,6 +28,14 @@ public class ConnectToServer : MonoBehaviourPunCallbacks {
         PhotonNetwork.AutomaticallySyncScene = true;
         PhotonNetwork.NickName = UserManager.Instance.Name;
         PhotonNetwork.JoinLobby(TypedLobby.Default);
+
+        if (PlayerPrefs.HasKey("PlayerAvatar")){
+            playerProperties["playerAvatar"] = PlayerPrefs.GetInt("PlayerAvatar");
+        } else {
+            playerProperties["playerAvatar"] = 0;
+        }
+
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
     }
 
     public override void OnJoinedLobby() {

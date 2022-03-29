@@ -11,7 +11,9 @@ public class SpawnPlayers : MonoBehaviour {
     void Start() {
         Vector2 randomPosition = new Vector3(Random.Range(minX, maxX), 1, Random.Range(minY, maxY));
 
-        string prefabName = PlayerAvatars.Instance.GetPlayerAvatarsName((int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]);
+        int playerAvatarIndex = (int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"];
+        PlayerPrefs.SetInt("PlayerAvatar", playerAvatarIndex);
+        string prefabName = PlayerAvatars.Instance.GetPlayerAvatarsName(playerAvatarIndex);
 
         PhotonNetwork.Instantiate(prefabName, randomPosition, Quaternion.identity);
     }
