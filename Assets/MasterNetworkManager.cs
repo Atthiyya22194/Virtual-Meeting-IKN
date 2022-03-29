@@ -50,4 +50,8 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
         //PhotonNetwork.LoadLevel("MeetingRoom");
         PhotonNetwork.LoadLevel(1);
     }
+
+    public void Response_BackToLobby() {
+        PhotonNetwork.LeaveRoom();
+    }
 }
