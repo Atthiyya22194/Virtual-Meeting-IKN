@@ -8,18 +8,11 @@ using Photon.Realtime;
 public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
 {
     ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
-
-    [SerializeField] GameObject charSelectCanvas;
+    
     [SerializeField] RawImage playerAvatar;
     [SerializeField] RenderTexture[] renderTextureAvatars;
 
-    private void Start() {
-        UpdatePlayerAvatar();
-    }
-
-    public void OnCharSelect() {
-        charSelectCanvas.SetActive(true);
-    }
+    
     public void OnPrevButton_Clicked() {
         if ((int)playerProperties["playerAvatar"] == 0) {
             playerProperties["playerAvatar"] = renderTextureAvatars.Length - 1;
@@ -52,7 +45,8 @@ public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
         }
     }
 
-    public void UpdatePlayerAvatar() {        
+    public void UpdatePlayerAvatar() {
+        playerProperties = PhotonNetwork.LocalPlayer.CustomProperties;
         playerAvatar.texture = renderTextureAvatars[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]];
     }
 }

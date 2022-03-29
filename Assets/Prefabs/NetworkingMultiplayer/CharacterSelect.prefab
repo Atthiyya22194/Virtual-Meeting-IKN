@@ -341,7 +341,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 4109049141444438407}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 26ba183ea6d25aa46a5a7b91b02f69fd, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4109049140284328816
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4109049140284328819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -493,6 +505,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4109049140501532039}
   - component: {fileID: 3621745901237141486}
+  - component: {fileID: 8327412272959907457}
+  - component: {fileID: 8370111638484298687}
   m_Layer: 0
   m_Name: CharacterSelect
   m_TagString: Untagged
@@ -528,12 +542,79 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eff1b6867613a5478f2af8b90532116, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charSelectCanvas: {fileID: 4109049140284328816}
   playerAvatar: {fileID: 4109049141087418764}
   renderTextureAvatars:
   - {fileID: 8400000, guid: 3d1f8fa77b9f0444d95d437d102eeb88, type: 2}
   - {fileID: 8400000, guid: ef1a3af928e7fda46bab7290f6b55e11, type: 2}
   - {fileID: 8400000, guid: ea16e15f37567b64baa95b7e7ec59520, type: 2}
+--- !u!114 &8327412272959907457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109049140501532036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b196723435084fa4db6fedec13226a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 770abb30e288ba34a8a2bfac5c39c0cd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4109049140284328816}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 3621745901237141486}
+        m_TargetAssemblyTypeName: LobbyCharacterSelect, Assembly-CSharp
+        m_MethodName: UpdatePlayerAvatar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &8370111638484298687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109049140501532036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b196723435084fa4db6fedec13226a5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 26ba183ea6d25aa46a5a7b91b02f69fd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4109049140284328816}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4109049140516554825
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,9 +736,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3621745901237141486}
-        m_TargetAssemblyTypeName: LobbyCharacterSelect, Assembly-CSharp
-        m_MethodName: OnMasukButton_Clicked
+      - m_Target: {fileID: 11400000, guid: 0bdbe26f3cd817046883e8bdda5c87c0, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -861,7 +942,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3621745901237141486}
         m_TargetAssemblyTypeName: LobbyCharacterSelect, Assembly-CSharp
-        m_MethodName: OnNextButton_Clicked
+        m_MethodName: OnPrevButton_Clicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class UserManager : MonoBehaviour
 {
     public static UserManager Instance;
-    public string Name { get; private set; }    
+    public string Name { get; private set; }
+    public ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
 
     private void Awake() {
         DontDestroyOnLoad(this);

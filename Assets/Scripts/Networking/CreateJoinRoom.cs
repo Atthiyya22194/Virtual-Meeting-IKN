@@ -6,28 +6,10 @@ using Photon.Realtime;
 using TMPro;
 
 public class CreateJoinRoom : MonoBehaviourPunCallbacks {
-
-    public GameObject lobbyGameObject;
-    public GameObject roomGameObject;
-    public TMP_InputField roomNameInputField;
-
-    public GameObject masterStartButton;    
-
-    private Dictionary<Player, UserRoomPanel> userDisplayed = new Dictionary<Player, UserRoomPanel>();
-
-    public TMP_Text roomCodeText;
-
-    public Transform roomPanel;
-    public UserRoomPanel userRoomPrefab;
+    
+    public TMP_InputField roomNameInputField;    
 
     private string tempName;
-
-    private void CleanUpRoom() {
-        userDisplayed.Clear();
-        foreach (Transform child in roomPanel) {
-            Destroy(child.gameObject);
-        }
-    }
 
     public void CreateRoom() {
         string roomName = Random.Range(1000, 9999).ToString();
@@ -35,78 +17,12 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
         {
             IsVisible = true,
             IsOpen = true,
-            MaxPlayers = 4,
+            MaxPlayers = 0,
             BroadcastPropsChangeToAll = true,
         };
         PhotonNetwork.CreateRoom(roomName, roomOptions);
     }
-
-    private void RefreshDisplayedUser() {
-        if (PhotonNetwork.CurrentRoom == null) {
-            return;
-        }
-
-        var playerList = PhotonNetwork.PlayerList;
-        Debug.Log(playerList.Length);
-        for (int i = 0; i < playerList.Length; i++) {
-            if (!userDisplayed.ContainsKey(playerList[i])) {
-                UserRoomPanel userRoomPanel = Instantiate(userRoomPrefab, roomPanel);
-                userRoomPanel.SetPlayer(playerList[i]);
-
-                if (playerList[i] == PhotonNetwork.LocalPlayer) {
-                    userRoomPanel.ApplyLocalChange();
-                }
-
-                userDisplayed.Add(playerList[i], userRoomPanel);
-            }
-        }
-    }
-
-    public override void OnJoinedRoom() {
-        CleanUpRoom();
-
-        roomCodeText.text = "Room Code: " + PhotonNetwork.CurrentRoom.Name;
-
-        roomGameObject.SetActive(true);
-        lobbyGameObject.SetActive(false);
-
-        ExitGames.Client.Photon.Hashtable properties = new ExitGames.Client.Photon.Hashtable()
-        {
-            {"playerAvatar", 0 }
-        };
-
-        PhotonNetwork.SetPlayerCustomProperties(properties);
-
-        RefreshDisplayedUser();
-
-        if (PhotonNetwork.IsMasterClient) {
-            // show start button
-            masterStartButton.SetActive(true);            
-        }
-    }
-
-    public override void OnPlayerEnteredRoom(Player newPlayer) {
-        UserRoomPanel userRoomPanel = Instantiate(userRoomPrefab, roomPanel);
-        userRoomPanel.SetPlayer(newPlayer);
-        userDisplayed.Add(newPlayer, userRoomPanel);
-    }
-
-    public override void OnPlayerLeftRoom(Player otherPlayer) {
-        Destroy(userDisplayed[otherPlayer].gameObject);
-        userDisplayed.Remove(otherPlayer);
-    }
-
-    public override void OnMasterClientSwitched(Player newMasterClient) {
-        if (newMasterClient == PhotonNetwork.LocalPlayer) {
-            masterStartButton.SetActive(true);
-        }
-    }
-
-    public void OnMasterPlayButton_Clicked() {
-        //PhotonNetwork.LoadLevel("MeetingRoom");
-        PhotonNetwork.LoadLevel(1);
-    }
-
+    
     public void OnCreateRoomButton_Clicked() {
         UserManager.Instance.SetName(tempName);
         PhotonNetwork.NickName = tempName;
@@ -119,12 +35,6 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
 
         string roomName = roomNameInputField.text;
         PhotonNetwork.JoinRoom(roomName);
-    }
-
-    public void OnLeaveRoomButton_Clicked() {
-        userDisplayed.Clear();
-        masterStartButton.SetActive(false);
-        PhotonNetwork.LeaveRoom();        
     }
 
     public void SetTempName(TMP_InputField inputField) {
