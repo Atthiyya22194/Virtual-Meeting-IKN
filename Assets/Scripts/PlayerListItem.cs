@@ -16,7 +16,6 @@ public class PlayerListItem : MonoBehaviourPunCallbacks
         _player = player;
         _nameText.text = player.NickName;
         _roleText.text = player.IsMasterClient ? "Host" : "Participant";
-        _avatar.texture = PlayerAvatars.Instance.GetPlayerAvatarImage((int)player.CustomProperties["playerAvatar"]);
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer) {
