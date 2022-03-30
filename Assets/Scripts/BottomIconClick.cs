@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using Photon.Pun;
 
-public class BottomIconClick : MonoBehaviour
+public class BottomIconClick : MonoBehaviourPunCallbacks
 {
     [SerializeField]
     private GameObject chatbox;
@@ -44,12 +44,15 @@ public class BottomIconClick : MonoBehaviour
     }
 
     public void OnPressExitButton() {
-        PhotonNetwork.LeaveRoom();
-        PhotonNetwork.LoadLevel(0);
+        PhotonNetwork.LeaveRoom();        
     }
 
     public void clickAnimation(GameObject button) {
         LeanTween.scale(button, new Vector3(0.4f, 0.4f, 0.4f), 0.2f);
         LeanTween.scale(button, new Vector3(1f, 1f, 1f), 0.2f);
+    }
+
+    public override void OnLeftRoom() {
+        PhotonNetwork.LoadLevel(0);
     }
 }

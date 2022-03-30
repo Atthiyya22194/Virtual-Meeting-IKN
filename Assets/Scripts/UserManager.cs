@@ -7,10 +7,16 @@ public class UserManager : MonoBehaviour
     public ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
 
     private void Awake() {
-        DontDestroyOnLoad(this);
-        Instance = this;
+        
+        if (Instance == null) {
+            Instance = FindObjectOfType<UserManager>();
+            DontDestroyOnLoad(this);
+        } else {
+            Destroy(this);
+        }
 
         Name = "User#" + Random.Range(1000, 9999);
+        
     }
 
     public void SetName(string name) {

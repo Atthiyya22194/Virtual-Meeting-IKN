@@ -20,10 +20,13 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
             PhotonNetwork.OfflineMode = false;
             PhotonNetwork.GameVersion = Application.version;
             PhotonNetwork.ConnectUsingSettings();
+
+        } else {
+            PhotonNetwork.ConnectUsingSettings();
         }
     }
 
-    public override void OnConnectedToMaster() {
+    public override void OnConnectedToMaster() {        
         PhotonNetwork.AutomaticallySyncScene = false;
         PhotonNetwork.NickName = UserManager.Instance.Name;
         PhotonNetwork.JoinLobby(TypedLobby.Default);
