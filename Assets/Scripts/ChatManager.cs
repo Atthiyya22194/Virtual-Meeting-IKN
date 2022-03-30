@@ -54,7 +54,7 @@ public class ChatManager : MonoBehaviour
     }
 
     public void SendChat(string msg) {
-        string newMessage = PhotonNetwork.NickName + ": " + msg;
+        string newMessage = "<b>" + PhotonNetwork.NickName + "</b> : " + msg;
         photonView.RPC("RPC_AddNewMessage", RpcTarget.All, newMessage);
     }
 
