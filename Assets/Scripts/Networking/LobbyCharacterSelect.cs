@@ -30,13 +30,12 @@ public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
         }
         else {
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] + 1;
-        }        
-        
+        }
+
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
     }
 
     public void OnMasukButton_Clicked() {
-        // Send messages to listener
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps) {
