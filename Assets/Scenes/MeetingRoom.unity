@@ -2480,22 +2480,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2493290313978346804, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1139305389}
-    - target: {fileID: 2493290313978346804, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPressShareButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 2493290313978346804, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BottomIconClick, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2493290313978346804, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: chatbox
       value: 
@@ -2587,38 +2571,6 @@ PrefabInstance:
     - target: {fileID: 4040165054011734250, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: m_Name
       value: BottomButtonCanvas
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579574754902130940, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1139305389}
-    - target: {fileID: 5579574754902130940, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPressExitButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579574754902130940, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BottomIconClick, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5579574754902130940, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173423054992712659, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1139305389}
-    - target: {fileID: 6173423054992712659, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPressMicButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173423054992712659, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: BottomIconClick, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 6173423054992712659, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
@@ -4858,10 +4810,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683191644363978887, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
-      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
