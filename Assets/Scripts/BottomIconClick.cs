@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class BottomIconClick : MonoBehaviour
 {
@@ -23,11 +24,24 @@ public class BottomIconClick : MonoBehaviour
         }
     }
 
+    public void OnPressMicButton() {
+
+    }
+
     public void OnPressChatboxBottomButton() {
         chatboxToggle = !chatboxToggle;
     }
 
     public void OnPressChatboxCloseButton() {
         chatboxToggle = false;
+    }
+
+    public void OnPressShareButton() {
+
+    }
+
+    public void OnPressExitButton() {
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel(0);
     }
 }
