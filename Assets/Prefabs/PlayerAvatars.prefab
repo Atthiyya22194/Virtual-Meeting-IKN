@@ -47,3 +47,7 @@ MonoBehaviour:
   - {fileID: 5239089726467012211, guid: 5b4165d21d219d549a4b97845e20fbdf, type: 3}
   - {fileID: 8615279068681891928, guid: 568192c5674b9a24f8bdd4d0f26e5e5a, type: 3}
   - {fileID: 5245535294086003906, guid: 1cfab10fbe1a4bb41b1ea1c4c5dbeb6b, type: 3}
+  playerAvatarImages:
+  - {fileID: 8400000, guid: 3d1f8fa77b9f0444d95d437d102eeb88, type: 2}
+  - {fileID: 8400000, guid: ef1a3af928e7fda46bab7290f6b55e11, type: 2}
+  - {fileID: 8400000, guid: ea16e15f37567b64baa95b7e7ec59520, type: 2}

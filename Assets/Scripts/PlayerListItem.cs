@@ -1,19 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 
-
 public class PlayerListItem : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private TMP_Text _text;
+    [SerializeField] private TMP_Text _nameText;
+    [SerializeField] private TMP_Text _roleText;
+    [SerializeField] private RawImage _avatar;
+
     Player _player;
 
     public void Setup(Player player) {
         _player = player;
-        _text.text = player.NickName;
+        _nameText.text = player.NickName;
+        _roleText.text = player.IsMasterClient ? "Host" : "Participant";
+        _avatar.texture = PlayerAvatars.Instance.GetPlayerAvatarImage((int)player.CustomProperties["playerAvatar"]);
     }
 
     public override void OnPlayerLeftRoom(Player otherPlayer) {
