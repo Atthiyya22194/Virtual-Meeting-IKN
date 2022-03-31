@@ -731,6 +731,9 @@ MonoBehaviour:
   micIcon: {fileID: 4985788376562262376}
   micOn: {fileID: 21300000, guid: 190a7c3e2f24b8343b2d2f84f7b78ff9, type: 3}
   micOff: {fileID: 21300000, guid: c83d5bbcb530a4a449346dcad32bf9a8, type: 3}
+  chatIcon: {fileID: 4040165052107315890}
+  chatNormal: {fileID: 21300000, guid: 0c63917deffe9474b93e6c2760b4a096, type: 3}
+  chatNotification: {fileID: 21300000, guid: af2edf65345eb8242a8fe463a9f65d2d, type: 3}
 --- !u!1 &4985788376562262376
 GameObject:
   m_ObjectHideFlags: 0

@@ -52,15 +52,16 @@ public class ChatManager : MonoBehaviour
     }
 
     [PunRPC]
-    void RPC_AddNewMessage(string msg) {
+    void RPC_AddNewMessage(string nickName, string msg) {
         //messages.Add(msg);
-        SpawnChatBubble(msg);
+        SpawnChatBubble(nickName, msg);
+        BottomIconClick.newChatCheck = true;
     }
 
     public void SendChat(string msg) {
         //string newMessage = "<b>" + PhotonNetwork.NickName + "</b> : " + msg;
-        string newMessage = msg;
-        photonView.RPC("RPC_AddNewMessage", RpcTarget.All, newMessage);
+        //string newMessage = msg;
+        photonView.RPC("RPC_AddNewMessage", RpcTarget.All, PhotonNetwork.NickName, msg);
     }
 
     public void SubmitChat() {
@@ -85,9 +86,9 @@ public class ChatManager : MonoBehaviour
         chatContent.text = newContents;
     }
 
-    void SpawnChatBubble(string msg) {
+    void SpawnChatBubble(string nickName, string msg) {
         GameObject instance = Instantiate(chatBubblePrefab, new Vector3(0, 0, 0), Quaternion.identity);
-        instance.transform.Find("NickName").GetComponent<TextMeshProUGUI>().text = PhotonNetwork.NickName;
+        instance.transform.Find("NickName").GetComponent<TextMeshProUGUI>().text = nickName;
         instance.transform.Find("Message").GetComponent<TextMeshProUGUI>().text = msg;
         instance.transform.SetParent(content.transform);
         instance.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
