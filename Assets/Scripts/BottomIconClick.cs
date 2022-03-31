@@ -10,12 +10,21 @@ public class BottomIconClick : MonoBehaviourPunCallbacks
     [SerializeField]
     private GameObject chatbox;
     private bool chatboxToggle;
+    private SoundInput soundInput;
+    private Image micIconImage;
 
-    public GameObject micButton, chatboxButton, shareButton;
+    public GameObject micButton, chatboxButton, shareButton, voiceManager;
+
+    public GameObject micIcon;
+    public Sprite micOn, micOff;
+    
 
     void Awake() {
         chatboxToggle = false;
         chatbox.SetActive(false);
+        soundInput = voiceManager.GetComponent<SoundInput>();
+        micIconImage = micIcon.GetComponent<Image>();
+        micIconImage.sprite = micOff;
     }
 
     void Update() {
@@ -27,6 +36,14 @@ public class BottomIconClick : MonoBehaviourPunCallbacks
     }
 
     public void OnPressMicButton() {
+        soundInput.buttonToggle = !soundInput.buttonToggle;
+        if (soundInput.buttonToggle == true) {
+            micIconImage.sprite = micOn;
+            Debug.Log("Mic enabled");
+        } else {
+            micIconImage.sprite = micOff;
+            Debug.Log("Mic disabled");
+        }
         clickAnimation(micButton);
     }
 

@@ -8,22 +8,35 @@ public class SoundInput : MonoBehaviour
     public Recorder recorder;
     public Listener listener;
     public bool isRecording;
+    public bool buttonToggle;
+
+    void Awake() {
+        buttonToggle = false;
+    }
 
     void Update() {
+        if (buttonToggle == true && !isRecording) {
+            StartRecord();
+        } else if (buttonToggle == false && isRecording) {
+            StopRecord();
+        }
+    }
+
+    public void Record() {
         if (Input.GetKeyDown(KeyCode.R) && !isRecording) {
             StartRecord();
-            isRecording = true;
         } else if (Input.GetKeyUp(KeyCode.R) && isRecording) {
             StopRecord();
-            isRecording = false;
         }
     }
 
     public void StartRecord() {
         recorder.StartRecord();
+        isRecording = true;
     }
 
     public void StopRecord() {
         recorder.StopRecord();
+        isRecording = false;
     }
 }

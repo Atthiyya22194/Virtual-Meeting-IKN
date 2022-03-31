@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4996856}
   - component: {fileID: 4996857}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -753,6 +753,11 @@ Transform:
   m_Father: {fileID: 360404454}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &451421003 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4529213380885122265, guid: 579ceba94b68c7c418d713c9968c97ea, type: 3}
+  m_PrefabInstance: {fileID: 2073944964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &456175094
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,7 +2282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 988429054}
   - component: {fileID: 988429055}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2871,7 +2876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1137281366}
   - component: {fileID: 1137281367}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2913,9 +2918,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 1071449699}
     m_Modifications:
     - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
+      propertyPath: micOn
+      value: 
+      objectReference: {fileID: 21300000, guid: 190a7c3e2f24b8343b2d2f84f7b78ff9, type: 3}
+    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
+      propertyPath: micOff
+      value: 
+      objectReference: {fileID: 21300000, guid: c83d5bbcb530a4a449346dcad32bf9a8, type: 3}
+    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: chatbox
       value: 
       objectReference: {fileID: 1210946074}
+    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
+      propertyPath: micIcon
+      value: 
+      objectReference: {fileID: 1139305390}
+    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
+      propertyPath: voiceManager
+      value: 
+      objectReference: {fileID: 451421003}
     - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -3029,6 +3050,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592d4a1124e0efc4fb261151dcb96f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1139305390 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4985788376562262376, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
+  m_PrefabInstance: {fileID: 1139305388}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182413796
 GameObject:
   m_ObjectHideFlags: 0
@@ -4904,7 +4930,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2101874397}
   - component: {fileID: 2101874398}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: GameObject (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
