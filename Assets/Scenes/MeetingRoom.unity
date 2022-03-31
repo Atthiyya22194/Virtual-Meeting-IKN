@@ -535,6 +535,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ec5819cae2a93448b6895f4c878a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &300465729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4634815532463276295, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
+  m_PrefabInstance: {fileID: 1210946071}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &306119655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2364,13 +2369,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 395788194}
     m_Modifications:
     - target: {fileID: 616111193636990736, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
+      propertyPath: content
+      value: 
+      objectReference: {fileID: 300465729}
+    - target: {fileID: 616111193636990736, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
       propertyPath: chatInput
       value: 
       objectReference: {fileID: 1210946073}
     - target: {fileID: 616111193636990736, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
+      propertyPath: scrollView
+      value: 
+      objectReference: {fileID: 300465729}
+    - target: {fileID: 616111193636990736, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
       propertyPath: chatContent
       value: 
       objectReference: {fileID: 1210946072}
+    - target: {fileID: 616111193636990736, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
+      propertyPath: chatBubblePrefab
+      value: 
+      objectReference: {fileID: 1729827654560053863, guid: eae9441259eb14944a97b0b30cbfd1db, type: 3}
     - target: {fileID: 616111193636990737, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
       propertyPath: sceneViewId
       value: 2
@@ -2918,21 +2935,9 @@ PrefabInstance:
     m_TransformParent: {fileID: 1071449699}
     m_Modifications:
     - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: micOn
-      value: 
-      objectReference: {fileID: 21300000, guid: 190a7c3e2f24b8343b2d2f84f7b78ff9, type: 3}
-    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: micOff
-      value: 
-      objectReference: {fileID: 21300000, guid: c83d5bbcb530a4a449346dcad32bf9a8, type: 3}
-    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: chatbox
       value: 
       objectReference: {fileID: 1210946074}
-    - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: micIcon
-      value: 
-      objectReference: {fileID: 1139305390}
     - target: {fileID: 4040165054011734241, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: voiceManager
       value: 
@@ -2971,18 +2976,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4040165054011734246, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
@@ -3050,11 +3043,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 592d4a1124e0efc4fb261151dcb96f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1139305390 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4985788376562262376, guid: 1effd8bc316d6974bbe6f9eef85bf77e, type: 3}
-  m_PrefabInstance: {fileID: 1139305388}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182413796
 GameObject:
   m_ObjectHideFlags: 0
@@ -3157,6 +3145,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1071449699}
     m_Modifications:
+    - target: {fileID: 2798582691388887140, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3891122250000273715, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_Name
       value: ChatCanvas
@@ -3195,18 +3187,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3891122250000273719, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3891122250000273719, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3891122250000273719, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3891122250000273719, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3891122250000273719, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
@@ -3261,24 +3241,12 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1015277859}
-    - target: {fileID: 3891122252025235207, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3891122252025235207, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -242
-      objectReference: {fileID: 0}
-    - target: {fileID: 5109751109202286157, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
+    - target: {fileID: 5216910712130644948, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5109751109202286157, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
+    - target: {fileID: 5216910712130644948, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5109751109202286157, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_AnchorMin.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6622490317677585798, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
@@ -3289,10 +3257,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1139305389}
-    - target: {fileID: 8785767719433857830, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPressChatboxCloseButton
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
 --- !u!114 &1210946072 stripped
@@ -5275,18 +5239,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
-      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4683191643989035844, guid: 495ecc2e46854e04e9b4ef909048affb, type: 3}
