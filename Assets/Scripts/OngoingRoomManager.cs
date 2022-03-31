@@ -12,6 +12,7 @@ public class OngoingRoomManager : MonoBehaviourPunCallbacks {
 
     private void Start() {
         roomCodeText.text = "RoomCode: " + PhotonNetwork.CurrentRoom.Name;
+        participantCounterText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
         Player[] players = PhotonNetwork.PlayerList;
 
         for (int i = 0; i < players.Length; i++) {
@@ -22,5 +23,9 @@ public class OngoingRoomManager : MonoBehaviourPunCallbacks {
         Instantiate(playerListItemPrefab, playerListTransform).Setup(newPlayer);
         participantCounterText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
     }
-    
+
+    public override void OnPlayerLeftRoom(Player otherPlayer) {
+        participantCounterText.text = PhotonNetwork.CurrentRoom.PlayerCount.ToString();
+    }
+
 }
