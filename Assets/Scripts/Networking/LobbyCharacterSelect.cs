@@ -7,12 +7,15 @@ using Photon.Realtime;
 
 public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
 {
-    ExitGames.Client.Photon.Hashtable playerProperties = new ExitGames.Client.Photon.Hashtable();
+    ExitGames.Client.Photon.Hashtable playerProperties;
     
     [SerializeField] RawImage playerAvatar;
     [SerializeField] RenderTexture[] renderTextureAvatars;
 
-    
+    private void Awake() {
+        playerProperties = PhotonNetwork.LocalPlayer.CustomProperties;
+    }
+
     public void OnPrevButton_Clicked() {
         if ((int)playerProperties["playerAvatar"] == 0) {
             playerProperties["playerAvatar"] = renderTextureAvatars.Length - 1;
@@ -21,7 +24,8 @@ public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
             playerProperties["playerAvatar"] = (int)playerProperties["playerAvatar"] - 1;
         }
         
-        PhotonNetwork.SetPlayerCustomProperties(playerProperties);        
+        PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+        UpdatePlayerAvatar();
     }
 
     public void OnNextButton_Clicked() {
@@ -33,19 +37,20 @@ public class LobbyCharacterSelect : MonoBehaviourPunCallbacks
         }
 
         PhotonNetwork.SetPlayerCustomProperties(playerProperties);
+        UpdatePlayerAvatar();
     }
 
     public void OnMasukButton_Clicked() {
     }
 
     public override void OnPlayerPropertiesUpdate(Player targetPlayer, ExitGames.Client.Photon.Hashtable changedProps) {
+        Debug.Log(playerProperties["playerAvatar"]);
         if (targetPlayer == PhotonNetwork.LocalPlayer) {
             UpdatePlayerAvatar(); 
         }
     }
 
     public void UpdatePlayerAvatar() {
-        playerProperties = PhotonNetwork.LocalPlayer.CustomProperties;
         playerAvatar.texture = renderTextureAvatars[(int)PhotonNetwork.LocalPlayer.CustomProperties["playerAvatar"]];
     }
 }
