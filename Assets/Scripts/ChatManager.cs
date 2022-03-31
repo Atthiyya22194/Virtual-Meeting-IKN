@@ -90,5 +90,6 @@ public class ChatManager : MonoBehaviour
         instance.transform.Find("NickName").GetComponent<TextMeshProUGUI>().text = PhotonNetwork.NickName;
         instance.transform.Find("Message").GetComponent<TextMeshProUGUI>().text = msg;
         instance.transform.SetParent(content.transform);
+        instance.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
     }
 }
