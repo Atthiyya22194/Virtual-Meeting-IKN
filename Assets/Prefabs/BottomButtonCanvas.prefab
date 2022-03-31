@@ -34,11 +34,11 @@ RectTransform:
   m_Father: {fileID: 4040165054011734246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 143.7, y: -464.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 143.70003, y: 42.399994}
   m_SizeDelta: {x: 66, y: 66}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &2493832517778317813
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -167,11 +167,11 @@ RectTransform:
   m_Father: {fileID: 4040165054011734246}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -143.7, y: -464.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -143.70003, y: 42.399994}
   m_SizeDelta: {x: 66, y: 66}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &7913388154690064931
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -300,11 +300,11 @@ RectTransform:
   m_Father: {fileID: 4040165054011734246}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.9, y: -464.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 47.899986, y: 42.399994}
   m_SizeDelta: {x: 66, y: 66}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1605615748112484116
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -508,11 +508,11 @@ RectTransform:
   m_Father: {fileID: 4040165054011734246}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -47.9, y: -464.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -47.899986, y: 42.399994}
   m_SizeDelta: {x: 66, y: 66}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &4040165052563689281
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -727,6 +727,10 @@ MonoBehaviour:
   micButton: {fileID: 2487006491217692671}
   chatboxButton: {fileID: 4040165052563689285}
   shareButton: {fileID: 4003694713166111829}
+  voiceManager: {fileID: 0}
+  micIcon: {fileID: 4985788376562262376}
+  micOn: {fileID: 21300000, guid: 190a7c3e2f24b8343b2d2f84f7b78ff9, type: 3}
+  micOff: {fileID: 21300000, guid: c83d5bbcb530a4a449346dcad32bf9a8, type: 3}
 --- !u!1 &4985788376562262376
 GameObject:
   m_ObjectHideFlags: 0
