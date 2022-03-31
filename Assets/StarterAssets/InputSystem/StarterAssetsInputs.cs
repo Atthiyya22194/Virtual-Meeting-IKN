@@ -25,15 +25,21 @@ namespace StarterAssets
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 		public void OnMove(InputValue value)
 		{
-			MoveInput(value.Get<Vector2>());
+			if (Cursor.lockState == CursorLockMode.Locked) {
+				MoveInput(value.Get<Vector2>());
+			} else {
+				MoveInput(Vector2.zero);
+            }
 		}
 
 		public void OnLook(InputValue value)
 		{
-			if(cursorInputForLook)
+			if(cursorInputForLook && Cursor.lockState == CursorLockMode.Locked)
 			{
 				LookInput(value.Get<Vector2>());
-			}
+			} else {
+				LookInput(Vector2.zero);
+            }
 		}
 
 		public void OnJump(InputValue value)
@@ -71,16 +77,6 @@ namespace StarterAssets
 		}
 
 #if !UNITY_IOS || !UNITY_ANDROID
-
-		private void OnApplicationFocus(bool hasFocus)
-		{
-			SetCursorState(cursorLocked);
-		}
-
-		private void SetCursorState(bool newState)
-		{
-			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
-		}
 
 #endif
 

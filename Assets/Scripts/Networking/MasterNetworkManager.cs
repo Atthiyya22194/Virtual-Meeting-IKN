@@ -9,6 +9,18 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
     [SerializeField] GameEvent OnJoinLobby;
     [SerializeField] GameEvent OnCharacterSelect;
 
+    public List<RoomInfo> roomInfos = new List<RoomInfo>();
+
+    private static MasterNetworkManager _instance;
+    public static MasterNetworkManager Instance {
+        get {
+            if (_instance == null) {
+                _instance = FindObjectOfType<MasterNetworkManager>();
+            }
+            return _instance;
+        }
+    }
+
     private void Awake() {
     #if !UNITY_EDITOR && UNITY_WEBGL
         WebGLInput.captureAllKeyboardInput = true;
@@ -41,20 +53,29 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
         PhotonNetwork.SetPlayerCustomProperties(UserManager.Instance.playerProperties);
     }
 
+    public override void OnRoomListUpdate(List<RoomInfo> roomList) {        
+        roomInfos = roomList;
+    }
+
     public override void OnJoinedLobby() {
         OnJoinLobby.Raise();
     }
 
     public override void OnJoinedRoom() {
-        OnCharacterSelect.Raise();
-    }
-
-    public void Response_MasukButtonClicked() {
         //PhotonNetwork.LoadLevel("MeetingRoom");
         PhotonNetwork.LoadLevel(1);
     }
 
+    public void Response_MasukButtonClicked() {        
+        if (CreateJoinRoom.Instance.lobbyState == LobbyState.Create) {
+            CreateJoinRoom.Instance.CreateRoom();
+        } else {
+            string roomName = CreateJoinRoom.Instance.roomNameInputField.text;
+            PhotonNetwork.JoinRoom(roomName);
+        }
+    }
+
     public void Response_BackToLobby() {
-        PhotonNetwork.LeaveRoom();
+        //PhotonNetwork.LeaveRoom();
     }
 }
