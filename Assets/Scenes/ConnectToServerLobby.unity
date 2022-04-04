@@ -387,10 +387,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 347199980}
     m_Modifications:
+    - target: {fileID: 4510403008358488942, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: Nama
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403008381275727, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: Nama
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403008933423366, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4510403008933423386, guid: f6f5244d192f9634797addce71965392, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 848120785}
+    - target: {fileID: 4510403008934616021, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4510403008982698324, guid: f6f5244d192f9634797addce71965392, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -438,6 +454,40 @@ PrefabInstance:
     - target: {fileID: 4510403008982698325, guid: f6f5244d192f9634797addce71965392, type: 3}
       propertyPath: m_Name
       value: Lobby
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009261902446, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: 'Buat Ruang Rapat
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009616435743, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: Masuk Ruang Rapat
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009809817830, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009812353505, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009844359315, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: Masukkan nama..
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403009844359326, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403010000660681, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4510403010000660686, guid: f6f5244d192f9634797addce71965392, type: 3}
+      propertyPath: m_text
+      value: Input Display Name...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6f5244d192f9634797addce71965392, type: 3}
