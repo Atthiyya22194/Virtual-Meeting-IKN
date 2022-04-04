@@ -23,23 +23,22 @@ namespace StarterAssets
 #endif
 
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
-		public void OnMove(InputValue value)
-		{
-			if (Cursor.lockState == CursorLockMode.Locked) {
+		public void OnMove(InputValue value) {
+			if (Cursor.lockState == CursorLockMode.Locked && Cursor.visible == false) {
 				MoveInput(value.Get<Vector2>());
-			} else {
+			}
+			else {
 				MoveInput(Vector2.zero);
-            }
+			}
 		}
 
-		public void OnLook(InputValue value)
-		{
-			if(cursorInputForLook && Cursor.lockState == CursorLockMode.Locked)
-			{
+		public void OnLook(InputValue value) {
+			if (cursorInputForLook && (Cursor.lockState == CursorLockMode.Locked && Cursor.visible == false)) {
 				LookInput(value.Get<Vector2>());
-			} else {
+			}
+			else {
 				LookInput(Vector2.zero);
-            }
+			}
 		}
 
 		public void OnJump(InputValue value)
