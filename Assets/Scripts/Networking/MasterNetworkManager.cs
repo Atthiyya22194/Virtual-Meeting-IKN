@@ -21,10 +21,10 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
         }
     }
 
-    private void Awake() {
-    #if !UNITY_EDITOR && UNITY_WEBGL
+    private void Awake() {        
+#if !UNITY_EDITOR && UNITY_WEBGL
         WebGLInput.captureAllKeyboardInput = true;
-    #endif
+#endif
     }
 
     private void Start() {
@@ -32,12 +32,10 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
             PhotonNetwork.OfflineMode = false;
             PhotonNetwork.GameVersion = Application.version;
             PhotonNetwork.ConnectUsingSettings();
-
-        } else {
-            PhotonNetwork.ConnectUsingSettings();
+        } else{            
+            StartCoroutine(LeaveAndReconnect());
         }
     }
-
     public override void OnConnectedToMaster() {        
         PhotonNetwork.AutomaticallySyncScene = false;
         PhotonNetwork.NickName = UserManager.Instance.Name;
@@ -78,4 +76,15 @@ public class MasterNetworkManager : MonoBehaviourPunCallbacks {
     public void Response_BackToLobby() {
         //PhotonNetwork.LeaveRoom();
     }
+
+    IEnumerator LeaveAndReconnect() {        
+        while (PhotonNetwork.NetworkClientState != ClientState.Disconnected) {            
+            yield return null;
+        }
+        PhotonNetwork.OfflineMode = false;
+        PhotonNetwork.GameVersion = Application.version;
+        PhotonNetwork.ConnectUsingSettings();
+    }
+
+
 }

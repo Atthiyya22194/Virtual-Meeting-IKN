@@ -79,7 +79,7 @@ public class BottomIconClick : MonoBehaviourPunCallbacks
     }
 
     public void OnPressExitButton() {
-        PhotonNetwork.LeaveRoom();        
+        PhotonNetwork.LeaveRoom();
     }
 
     public void clickAnimation(GameObject button) {
