@@ -1,0 +1,222 @@
+fileFormatVersion: 2
+guid: 47f1a009cdca14d46871d2f95c1a2cee
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Atep.001_Baked_Baked
+    second: {fileID: 2100000, guid: faf833b0f46521c44b5fd6ac32fdece9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cube.007_Baked
+    second: {fileID: 2100000, guid: 89992d47c6abd0b4e9ad31c421f0cd25, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Dwwwaala_Baked
+    second: {fileID: 2100000, guid: 2e311b5e8ac59f74295d61d00ce4e885, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor_Baked
+    second: {fileID: 2100000, guid: 23e1fb98593c5484e8dd549dc79472bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Gapura_Baked
+    second: {fileID: 2100000, guid: 8ea04620f158eb64e9cf62dfa5a45e24, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kala Makara_Baked
+    second: {fileID: 2100000, guid: 6e017c4bc70c0c949ac7694f19f01f08, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kaso_Baked
+    second: {fileID: 2100000, guid: e18b9e3cf79e5f145bec3b0c5480ded4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: List_Baked
+    second: {fileID: 2100000, guid: d54664adb369cef40b3ade43ea1dfaee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pilar 1.003_Baked
+    second: {fileID: 2100000, guid: 476df5d13fefa5c4cb6ffab83d6b6b71, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Relief_Baked
+    second: {fileID: 2100000, guid: b59f9445758124a4f8ced0df57089189, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Soko Guru_Baked
+    second: {fileID: 2100000, guid: 6e9b53c48657a0045bb2827ce975876b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood Pillars_Baked.002
+    second: {fileID: 2100000, guid: 9b34573ad912f6d4c9383eaac0f89579, type: 2}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Atep.001_Baked_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 57f4f4d07ce30ef47906be742a3f9a20, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Cube.007_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 9b4eae9e7525bd143ba2e017d3beb50f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Dwwwaala_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 150f70b3e5582054c98cf7c8ac239a37, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Floor_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 4b4a2abdcb4d49f40a28e2936c6787f9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Gapura_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: ae86e69bd0d0d574493dd26b3d9549d7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kala Makara_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 68aacb2013df78e4e81a26d1f88ee89e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Kaso_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 6dce68c663d4ea2409f98c8c04dba510, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: List_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: a567b00bd69aa7944a02989ecfc3293e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Pilar 1.003_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: afbfc53d41ec4ac47a34e782416e7004, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Relief_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: 228ee2ea973ff6c478142182b888ffdf, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Soko Guru_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: b40e499856228b142ada3c19d2003eb4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood Pillars_Bake1_PBR_Diffuse
+    second: {fileID: 2800000, guid: a72b4ba174c634644963a583f4792b43, type: 3}
+  materials:
+    materialImportMode: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
