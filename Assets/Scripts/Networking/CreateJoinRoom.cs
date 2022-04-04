@@ -27,7 +27,7 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
     public LobbyState lobbyState;
 
     private string tempName;
-    private int selectedRumahIndex;
+    private int selectedRumahIndex = 0;
 
     ExitGames.Client.Photon.Hashtable roomProperties = new ExitGames.Client.Photon.Hashtable();
 

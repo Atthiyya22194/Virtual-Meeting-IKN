@@ -17,7 +17,7 @@ public class UserManager : MonoBehaviour
         }
 
         Name = "User#" + Random.Range(1000, 9999);
-        
+        MouseSensitivity = 1f;
     }
 
     public void SetName(string name) {

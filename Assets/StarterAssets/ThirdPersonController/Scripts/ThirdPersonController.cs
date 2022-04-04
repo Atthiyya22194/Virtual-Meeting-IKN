@@ -24,8 +24,7 @@ namespace StarterAssets
 		[Range(0.0f, 0.3f)]
 		public float RotationSmoothTime = 0.12f;
 		[Tooltip("Acceleration and deceleration")]
-		public float SpeedChangeRate = 10.0f;
-		public float MouseSensitivity = 1f;
+		public float SpeedChangeRate = 10.0f;		
 
 		[Space(10)]
 		[Tooltip("The height the player can jump")]

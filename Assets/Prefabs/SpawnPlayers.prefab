@@ -43,6 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e35e4926ad63b745bbd7a95166d21bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  environmentTransform: {fileID: 0}
+  rumahAdatPrefabs:
+  - {fileID: 5223074026576460745, guid: 9236680b4d846dc4abff8e32f0215f52, type: 3}
+  - {fileID: 8800512127979887478, guid: ee78ac8a3064088418d1298f2fb95953, type: 3}
+  - {fileID: 2205545993299825540, guid: 1730bd9805fe4df4582c058f023fda45, type: 3}
+  spawnPoints:
+  - {x: 0, y: 2.5, z: -20}
+  - {x: 0, y: 2, z: -20}
+  - {x: 0, y: 10, z: -20}
   maxX: 3.5
   maxY: 22
   minX: -3.5
