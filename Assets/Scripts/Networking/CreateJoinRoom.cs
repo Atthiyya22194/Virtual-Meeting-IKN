@@ -1,10 +1,10 @@
 using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
-
 
 public class CreateJoinRoom : MonoBehaviourPunCallbacks {
 
@@ -16,7 +16,10 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
             }
             return _instance;
         }
-    }    
+    }
+
+    public Sprite[] rumahAdatPreviewImages;
+    public Image previewImage;
 
     public TMP_InputField roomNameInputField;
     public GameEvent CharacterSelect;
@@ -24,15 +27,22 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
     public LobbyState lobbyState;
 
     private string tempName;
+    private int selectedRumahIndex;
+
+    ExitGames.Client.Photon.Hashtable roomProperties = new ExitGames.Client.Photon.Hashtable();
 
     public void CreateRoom() {
         string roomName = Random.Range(1000, 9999).ToString();
+
+        roomProperties["roomPlace"] = selectedRumahIndex;
+
         RoomOptions roomOptions = new RoomOptions()
         {
             IsVisible = true,
             IsOpen = true,
             MaxPlayers = 0,
             BroadcastPropsChangeToAll = true,
+            CustomRoomProperties = roomProperties
         };
         PhotonNetwork.CreateRoom(roomName, roomOptions);
     }
@@ -59,6 +69,30 @@ public class CreateJoinRoom : MonoBehaviourPunCallbacks {
         } else {
             Debug.Log("Room Doesnt exist");
         }
+    }
+
+    public void OnNextPreviewRoomButton_Clicked() {
+        if (selectedRumahIndex == rumahAdatPreviewImages.Length - 1) {
+            selectedRumahIndex = 0;
+        } else {
+            selectedRumahIndex = selectedRumahIndex + 1;
+        }
+
+        UpdatePreview();
+    }
+
+    public void OnPreviousPreviewButton_Clicked() {
+        if (selectedRumahIndex == 0) {
+            selectedRumahIndex = rumahAdatPreviewImages.Length - 1;
+        } else {
+            selectedRumahIndex = selectedRumahIndex - 1;
+        }
+
+        UpdatePreview();
+    }
+
+    public void UpdatePreview() {
+        previewImage.sprite = rumahAdatPreviewImages[selectedRumahIndex];
     }
 
     public void SetTempName(TMP_InputField inputField) {
