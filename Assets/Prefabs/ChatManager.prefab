@@ -46,6 +46,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chatInput: {fileID: 0}
   chatContent: {fileID: 0}
+  chatBubblePrefab: {fileID: 1729827654560053863, guid: eae9441259eb14944a97b0b30cbfd1db, type: 3}
+  content: {fileID: 0}
+  contentScrollRect: {fileID: 0}
 --- !u!114 &616111193636990737
 MonoBehaviour:
   m_ObjectHideFlags: 0

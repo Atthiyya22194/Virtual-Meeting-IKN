@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 using System.Text.RegularExpressions;
@@ -19,6 +20,7 @@ public class ChatManager : MonoBehaviour
 
     public GameObject chatBubblePrefab;
     public GameObject content;
+    public ScrollRect contentScrollRect;
 
     void Start() {
         photonView = GetComponent<PhotonView>();
@@ -87,10 +89,18 @@ public class ChatManager : MonoBehaviour
     }
 
     void SpawnChatBubble(string nickName, string msg) {
+        float backup = contentScrollRect.verticalNormalizedPosition;
         GameObject instance = Instantiate(chatBubblePrefab, new Vector3(0, 0, 0), Quaternion.identity);
         instance.transform.Find("NickName").GetComponent<TextMeshProUGUI>().text = nickName;
         instance.transform.Find("Message").GetComponent<TextMeshProUGUI>().text = msg;
         instance.transform.SetParent(content.transform);
         instance.GetComponent<RectTransform>().localScale = new Vector3(1f, 1f, 1f);
+        StartCoroutine(ApplyScrollPosition(contentScrollRect, backup));
+    }
+
+    IEnumerator ApplyScrollPosition(ScrollRect contentScrollRect, float verticalPos) {
+        yield return new WaitForEndOfFrame();
+        contentScrollRect.verticalNormalizedPosition = verticalPos;
+        LayoutRebuilder.ForceRebuildLayoutImmediate((RectTransform)contentScrollRect.transform);
     }
 }
