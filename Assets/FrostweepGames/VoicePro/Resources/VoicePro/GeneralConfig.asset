@@ -26,4 +26,4 @@ MonoBehaviour:
   speakerConfig:
     spatialBlend: 0
     outputAudioMixerGroup: {fileID: 0}
-    maxInactiveTime: 120
+    maxInactiveTime: 3600
