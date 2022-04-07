@@ -713,6 +713,10 @@ PrefabInstance:
       propertyPath: contentScrollRect
       value: 
       objectReference: {fileID: 1210946075}
+    - target: {fileID: 616111193636990737, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
+      propertyPath: sceneViewId
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 616111193636990742, guid: 1bbc9e1491df75a46891bf654bee3beb, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1068,6 +1072,10 @@ PrefabInstance:
     - target: {fileID: 5216910712130644948, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622490317677585798, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
+      propertyPath: sceneViewId
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8785767719433857830, guid: 586c083276fd3b64d89c2ae98545d13c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
